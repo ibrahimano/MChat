@@ -1,16 +1,13 @@
 package com.example.mchatclient;
 
-//import com.example.mchatclient.models.Message;
-//import com.example.mchatclient.models.User;
+
 import com.example.mchatclient.others.Client;
 import com.example.mchatclient.others.ClientListener;
-import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -18,8 +15,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import javafx.stage.Modality;
-import javafx.stage.StageStyle;
+
 import models.Message;
 import models.User;
 

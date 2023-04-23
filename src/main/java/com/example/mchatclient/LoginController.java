@@ -3,8 +3,7 @@ package com.example.mchatclient;
 
 
 import com.example.mchatclient.models.AccountInfo;
-//import com.example.mchatclient.models.Message;
-//import com.example.mchatclient.models.User;
+
 import javafx.geometry.Pos;
 import javafx.scene.layout.AnchorPane;
 import models.Message;
@@ -20,13 +19,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
