@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mchatclient.LoggedInController">
+   <children>
+      <AnchorPane prefHeight="434.0" prefWidth="202.0" style="-fx-background-color: #CBE4DE;">
+         <children>
+            <Circle fx:id="avatar" fill="#f5f6f7" layoutX="100.0" layoutY="78.0" radius="46.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="usernameLabel" alignment="CENTER" layoutX="74.0" layoutY="140.0" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <VBox layoutX="-1.0" layoutY="254.0" prefHeight="267.0" prefWidth="202.0">
+               <children>
+                  <Pane fx:id="pn_profil" prefHeight="42.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="83.0" layoutY="13.0" text="Profil">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="45.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8-male-user-50.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pn_chat" prefHeight="42.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="85.0" layoutY="13.0" text="Chat">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="45.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8-chat-room-50.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="195.0" prefWidth="202.0">
+                     <children>
+                        <Pane fx:id="pn_logout" layoutX="1.0" layoutY="145.0" prefHeight="42.0" prefWidth="202.0">
+                           <children>
+                              <Label layoutX="50.0" layoutY="13.0" text="Se deconnecter">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="21.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons8-logout-50.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <Pane layoutX="1.0" layoutY="172.0" prefHeight="58.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="15.0" text="Status">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="btn_status" layoutX="68.0" layoutY="13.0" mnemonicParsing="false" selected="true" text="En ligne" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchorPane_chat_profil" prefHeight="536.0" prefWidth="680.0">
+         <children>
+            <AnchorPane fx:id="anchor_chat_userOnline" prefHeight="535.0" prefWidth="187.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="14.0" text="Chat">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="72.0" text="Utilisateur en ligne">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutY="95.0" prefHeight="32.0" prefWidth="194.0">
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8-search-40.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="9.0" top="2.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField promptText="Rechercher">
+                           <HBox.margin>
+                              <Insets left="4.0" top="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <ScrollPane fx:id="scrollUsers" fitToWidth="true" layoutX="1.0" layoutY="135.0" prefHeight="399.0" prefWidth="194.0">
+                     <content>
+                        <VBox fx:id="usersBox" prefHeight="400.0" prefWidth="179.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor_chat_messages" layoutX="194.0" prefHeight="536.0" prefWidth="286.0">
+               <children>
+                  <Pane prefHeight="479.0" prefWidth="480.0" style="-fx-background-color: #F1F1F1;">
+                     <children>
+                        <Separator layoutX="-3.0" orientation="VERTICAL" prefHeight="535.0" prefWidth="6.0" />
+                        <ScrollPane fx:id="scrollMsgs" fitToWidth="true" prefHeight="479.0" prefWidth="480.0">
+                           <content>
+                              <VBox fx:id="messageBox" prefHeight="479.0" prefWidth="473.0">
+                                 <children>
+                                    <StackPane prefHeight="150.0" prefWidth="465.0" />
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="477.0" prefHeight="58.0" prefWidth="480.0" style="-fx-background-color: #CBE4DE;">
+                     <children>
+                        <Button layoutX="8.0" layoutY="9.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="45.0">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons8-attach-50.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="tf_message" layoutX="63.0" layoutY="9.0" prefHeight="40.0" prefWidth="354.0" promptText="Taper un message" />
+                        <Button fx:id="btn_send" layoutX="428.0" layoutY="9.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="45.0">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/sent.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+
+   </children>
+</HBox>

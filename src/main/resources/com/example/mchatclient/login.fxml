@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mchatclient.LoginController">
+   <children>
+      <AnchorPane prefHeight="454.0" prefWidth="0.0" style="-fx-background-color: #2E4F4F;" HBox.hgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="138.0" fitWidth="128.0" layoutX="70.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/chat.png" />
+               </image></ImageView>
+            <Label layoutX="84.0" layoutY="424.0" text="FSO M2I 2022-2023" textAlignment="CENTER" textFill="#cbe4de">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="106.0" layoutY="268.0" text="MChat" textAlignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.560606163559538" startX="0.8977272880799843">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.05829999968409538" green="0.5142766833305359" blue="0.5299999713897705" opacity="0.9006849527359009" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7960784435272217" green="0.8941176533699036" blue="0.8705882430076599" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="381.0" style="-fx-background-color: #CBE4DE;" HBox.hgrow="ALWAYS">
+         <children>
+            <TextField fx:id="tf_email" layoutX="117.0" layoutY="115.0" prefHeight="42.0" prefWidth="220.0" promptText="Adresse e-mail" text="ibrahim@gmail.com" />
+            <PasswordField fx:id="tf_password" layoutX="117.0" layoutY="184.0" prefHeight="42.0" prefWidth="220.0" promptText="Mot de passe" text="ibrahim" />
+            <Button fx:id="btn_login" layoutX="117.0" layoutY="242.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="220.0" style="-fx-background-color: #0E8388;" text="Se connecter" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_new_account" layoutX="152.0" layoutY="388.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="149.0" style="-fx-background-color: #42b72a;" text="Créer nouveau compte" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="143.0" layoutY="361.0" text="Vous n'avez pas de compte ?">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" layoutX="137.0" layoutY="298.0" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="122.0" layoutY="168.0" text="Mot de passe" textFill="#0e8388">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="99.0" text="Adresse e-mail" textFill="#0e8388">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</HBox>

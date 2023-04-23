@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mchatclient.ProfileController">
+    <children>
+        <AnchorPane prefHeight="434.0" prefWidth="202.0" style="-fx-background-color: #CBE4DE;">
+            <children>
+                <Circle fx:id="avatar" fill="#f5f6f7" layoutX="100.0" layoutY="78.0" radius="46.0" stroke="BLACK" strokeType="INSIDE" />
+                <Label fx:id="usernameLabel" alignment="CENTER" layoutX="74.0" layoutY="140.0" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                    </font>
+                </Label>
+                <VBox layoutX="-1.0" layoutY="254.0" prefHeight="267.0" prefWidth="202.0">
+                    <children>
+                        <Pane fx:id="pn_profil" prefHeight="42.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="83.0" layoutY="13.0" text="Profil">
+                                    <font>
+                                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="45.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/icons8-male-user-50.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="pn_chat" prefHeight="42.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="85.0" layoutY="13.0" text="Chat">
+                                    <font>
+                                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="45.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/icons8-chat-room-50.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <Pane prefHeight="195.0" prefWidth="202.0">
+                            <children>
+                                <Pane fx:id="pn_logout" layoutX="1.0" layoutY="145.0" prefHeight="42.0" prefWidth="202.0">
+                                    <children>
+                                        <Label layoutX="50.0" layoutY="13.0" text="Se deconnecter">
+                                            <font>
+                                                <Font name="Arial Rounded MT Bold" size="13.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="21.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@images/icons8-logout-50.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </Pane>
+                    </children>
+                </VBox>
+                <Pane layoutX="1.0" layoutY="172.0" prefHeight="58.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="15.0" text="Status">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="btn_status" layoutX="68.0" layoutY="13.0" mnemonicParsing="false" selected="true" text="En ligne" />
+                    </children>
+                </Pane>
+            </children></AnchorPane>
+        <AnchorPane prefHeight="535.0" prefWidth="681.0">
+            <children>
+                <Label layoutX="25.0" layoutY="14.0" text="Profil">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                    </font>
+                </Label>
+            <TextField fx:id="tf_username" layoutX="74.0" layoutY="97.0" prefHeight="42.0" prefWidth="220.0" promptText="Nom d'utilisateur" />
+            <TextField fx:id="tf_email" layoutX="74.0" layoutY="184.0" prefHeight="42.0" prefWidth="220.0" promptText="Adresse e-mail" />
+            <PasswordField fx:id="tf_password" layoutX="74.0" layoutY="266.0" prefHeight="42.0" prefWidth="220.0" promptText="Mot de passe" />
+            <Label layoutX="77.0" layoutY="243.0" text="Mot de passe" textFill="#0e8388">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="159.0" text="Adresse e-mail" textFill="#0e8388">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="72.0" text="Nom d'utilisateur" textFill="#0e8388">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                </font>
+            </Label>
+            <Label fx:id="userNameLabel" layoutX="77.0" layoutY="101.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailLabel" layoutX="77.0" layoutY="188.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordLabel" layoutX="83.0" layoutY="270.0" text="**************">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_confirm_username" layoutX="300.0" layoutY="103.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #42b72a;" text="Terminé" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="btn_confirm_email" layoutX="300.0" layoutY="189.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #42b72a;" text="Terminé" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_confirm_password" layoutX="300.0" layoutY="272.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #42b72a;" text="Terminé" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_edit_username" layoutX="387.0" layoutY="100.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="37.0" style="-fx-background-color: #CBE4DE;">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-pencil-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_edit_email" layoutX="387.0" layoutY="186.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="37.0" style="-fx-background-color: #CBE4DE;">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-pencil-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_edit_password" layoutX="387.0" layoutY="269.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="37.0" style="-fx-background-color: #CBE4DE;">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-pencil-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="userNameErrorLabel" layoutX="440.0" layoutY="109.0" textFill="RED" />
+            <Label fx:id="emailErrorLabel" layoutX="440.0" layoutY="197.0" textFill="RED" />
+            </children></AnchorPane>
+    </children>
+</HBox>
